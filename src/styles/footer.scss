@@ -1,0 +1,65 @@
+@use "./variables.scss" as v;
+
+.footer {
+  min-height: 100px;
+  min-width: 100%;
+  background-color: v.$backgroundColorTile;
+  border-top: 2px solid v.$themeColor2;
+
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  @media screen and (max-width: v.$mobileWidth) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  span {
+    margin: 5px;
+    @media screen and (max-width: v.$mobileWidth) {
+      font-size: 0.6rem;
+    }
+    font-size: 0.8rem;
+    color: rgba($color: v.$colorDefault, $alpha: 0.6);
+  }
+
+  #info {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 5px;
+
+    a {
+      margin: 5px;
+      text-decoration: none;
+      @media screen and (max-width: v.$mobileWidth) {
+        font-size: 0.65rem;
+      }
+      font-size: 0.9rem;
+      color: v.$themeColor2;
+    }
+
+    #fern {
+      color: #62fb67;
+    }
+  }
+
+  #social {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+    a {
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  #other {
+    padding: 0 0 5px 5px;
+    grid-area: 2 / 1 / 3 / 3;
+  }
+}
