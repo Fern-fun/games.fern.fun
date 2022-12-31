@@ -1,5 +1,5 @@
 <p align="center">
- <a><img width=200px height=200px style="border-radius: 20px; object-fit: cover;" src="https://raw.githubusercontent.com/Fern-fun/game.fern.fun/main/frontend/public/logo.png" alt="Project logo"></a>
+ <a><img width=200px height=200px style="border-radius: 20px; object-fit: cover;" src="https://raw.githubusercontent.com/Fern-fun/game.fern.fun/master/public/logo.png" alt="Project logo"></a>
 </p>
 
 <h1 align="center">game.fern.fun</h1>
