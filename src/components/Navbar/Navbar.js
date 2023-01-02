@@ -41,6 +41,15 @@ function Navbar() {
             <span>Rick and Morty</span>
           </div>
         </Link>
+
+        <Link
+          to="/pokemon"
+          onClick={(e) => (hamburger ? setHamburger((a) => !a) : null)}
+        >
+          <div>
+            <span>Pokemon</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

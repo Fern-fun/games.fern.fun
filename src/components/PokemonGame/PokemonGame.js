@@ -1,31 +1,31 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-function RANDM() {
+function PokemonGame() {
   const [data, setData] = React.useState({});
 
   const [hotStreak, setHotStreak] = React.useState(
-    parseInt(localStorage.getItem("hotStreakRandM"))
-      ? parseInt(localStorage.getItem("hotStreakRandM"))
+    parseInt(localStorage.getItem("hotStreakPokemon"))
+      ? parseInt(localStorage.getItem("hotStreakPokemon"))
       : 0
   );
 
   const [error, setError] = React.useState("");
 
   const checkAnwser = (e) => {
-    if (e.target.id === data.correct) {
+    if (e.target.id === data.pokemon.name) {
       setHotStreak((e) => e + 1);
-      localStorage.setItem("hotStreakRandM", parseInt(hotStreak + 1));
+      localStorage.setItem("hotStreakPokemon", parseInt(hotStreak + 1));
       randomData();
     } else {
       setHotStreak(0);
-      localStorage.setItem("hotStreakRandM", parseInt(0));
+      localStorage.setItem("hotStreakPokemon", parseInt(0));
       randomData();
     }
   };
 
   const randomData = () => {
-    fetch("https://api.fern.fun/r&m/random")
+    fetch("https://api.fern.fun/pokemon/random")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -47,9 +47,13 @@ function RANDM() {
               <LazyLoadImage src="/img/fire.svg" alt="hotStreak" />
               {hotStreak}
             </div>
-            <div id="img">
-              {"character" in data ? (
-                <LazyLoadImage src={data.character.image} alt={data.correct} />
+            <div id="flags">
+              {"pokemon" in data ? (
+                <LazyLoadImage
+                  src={data.img}
+                  alt={data.pokemon.name}
+                  style={{ width: "215px" }}
+                />
               ) : (
                 <img alt="no-img" />
               )}
@@ -74,4 +78,4 @@ function RANDM() {
   );
 }
 
-export default RANDM;
+export default PokemonGame;

@@ -47,7 +47,7 @@ const Flags = () => {
               <img src="/img/fire.svg" alt="hotStreak" />
               {hotStreak}
             </div>
-            <div id="flags">
+            <div id="img">
               {country ? (
                 <img src={country.flag} alt={country.country} />
               ) : (
