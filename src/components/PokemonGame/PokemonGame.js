@@ -10,12 +10,22 @@ function PokemonGame() {
       : 0
   );
 
+  const [maxHotStreak, setMaxHotStreak] = React.useState(
+    parseInt(localStorage.getItem("maxHotStreakPokemon"))
+      ? parseInt(localStorage.getItem("maxHotStreakPokemon"))
+      : 0
+  );
+
   const [error, setError] = React.useState("");
 
   const checkAnwser = (e) => {
     if (e.target.id === data.pokemon.name) {
       setHotStreak((e) => e + 1);
       localStorage.setItem("hotStreakPokemon", parseInt(hotStreak + 1));
+      if (hotStreak + 1 > maxHotStreak) {
+        setMaxHotStreak(hotStreak + 1);
+        localStorage.setItem("maxHotStreakPokemon", parseInt(hotStreak + 1));
+      }
       randomData();
     } else {
       setHotStreak(0);
@@ -29,13 +39,18 @@ function PokemonGame() {
       .then((res) => res.json())
       .then((data) => {
         setData(data);
+        localStorage.setItem("pokemonGame", JSON.stringify(data));
         setError("");
       })
       .catch(setError("Error"));
   };
 
   React.useEffect(() => {
-    randomData();
+    if (localStorage.getItem("pokemonGame")) {
+      setData(JSON.parse(localStorage.getItem("pokemonGame")));
+    } else {
+      randomData();
+    }
   }, []);
 
   return (
@@ -45,7 +60,7 @@ function PokemonGame() {
           <>
             <div id="hotStreak">
               <LazyLoadImage src="/img/fire.svg" alt="hotStreak" />
-              {hotStreak}
+              {hotStreak} {maxHotStreak ? `(${maxHotStreak})` : ""}
             </div>
             <div id="flags">
               {"pokemon" in data ? (

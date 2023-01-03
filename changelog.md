@@ -2,7 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.0] - 15.12.2022
+## [0.3.0] - 03.01.2023
+
+### Major changes
+
+- Add Pokemon guessing game
+- Save highscores in local storage
+
+### Changed features
+
+- Add new scrollbar
+- Save guess panel
+
+### Fixed bugs
+
+## [0.2.0] - 02.01.2023
 
 ### Major changes
 
@@ -16,7 +30,7 @@ All notable changes to this project will be documented in this file.
 
 - Fix bug wiht correct answer dsplaying
 
-## [0.1.0] - 15.12.2022
+## [0.1.0] - 31.12.2022
 
 ### Major changes
 

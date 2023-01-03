@@ -36,3 +36,32 @@ body {
     width: 200px;
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: v.$themeColor2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: v.$themeColor2;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+
+  @media screen and (max-width: v.$mobileWidth) {
+    display: block;
+  }
+}
