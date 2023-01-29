@@ -86,4 +86,13 @@
       }
     }
   }
+
+  #count {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    font-size: 0.5rem;
+  }
 }

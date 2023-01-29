@@ -124,6 +124,9 @@ const Flags = () => {
                   : null}
               </button>
             </div>
+            <div id="count">
+              {"count" in country ? "In db: " + country.count : ""}
+            </div>
           </>
         ) : (
           <div className="loading">

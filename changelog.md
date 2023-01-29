@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 29.01.2023
+
+### Major changes
+
+### Changed features
+
+### Fixed bugs
+
+- Msg when api is offline
+
 ## [0.3.0] - 03.01.2023
 
 ### Major changes

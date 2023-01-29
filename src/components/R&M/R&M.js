@@ -78,6 +78,9 @@ function RANDM() {
                   ))
                 : ""}
             </div>
+            <div id="count">
+              {"count" in data ? "In db: " + data.count : ""}
+            </div>
           </>
         ) : (
           <div className="loading">
