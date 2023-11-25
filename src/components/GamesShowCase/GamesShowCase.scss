@@ -93,10 +93,23 @@
 
 
         transition: all 0.3s ease-in-out;
+        
+        &:disabled {
+          background-color: rgba($color: $game-card--links--bnt--bg--color, $alpha: 0.5);
+          border: none;
+          cursor: not-allowed;
+        }
+        
         &:hover{
           border: 1px solid $game-card--links--bnt--bg--color;
           background: transparent;
           color: #fff;
+
+          &:disabled {
+            border: none;
+            background-color: rgba($color: $game-card--links--bnt--bg--color, $alpha: 0.5);
+            color: #000;
+          }
         }
       }
     }

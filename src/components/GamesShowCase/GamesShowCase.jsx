@@ -31,7 +31,7 @@ const GamesShowCase = () => {
                         </div>
                     </div>
                     <div className='game-card__links'>
-                        <button>Play</button>
+                        {game.play != "" ? <button onClick={(e) => console.log(e)}>Play</button> : <button disabled>Play</button>}
                     </div>
                 </div>
             ))

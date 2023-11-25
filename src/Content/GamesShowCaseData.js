@@ -1,13 +1,11 @@
 const GamesShowCaseData = [
     {
-        "title": "Game 1",
-        "image": "https://communications.gwu.edu/sites/g/files/zaxdzs5371/files/2023-05/template-resize-drupal.jpg",
-        "description": "This is a description of the game",
+        "title": "Flag Quiz",
+        "image": "https://api.triviacreator.com/v1/imgs/quiz/Flag-map_of_the_world_(2017)-a4896e7a-afbc-4865-8a43-8ef15c44471b.png",
+        "description": "Guess the country by its flag!",
         "tags": ["guessing", "puzzle"],
-        "discord": "https://discord.gg/1234",
-        "releaseDate": "01/01/2021",
-        "steam": "https://steamcommunity.com/app/1234",
-        "play": "https://www.google.com"
+        "releaseDate": "Coming Soon",
+        "play": ""
     }
 ]
 export default GamesShowCaseData;
