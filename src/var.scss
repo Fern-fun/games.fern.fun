@@ -1,0 +1,55 @@
+$mobile-width: 800px;
+
+/* Nav */
+$navbar-bg-color: #1a1a1a;
+$navbar-hover-color: #fa3232;
+$navbar-lab-color: #7dc3ff;
+$navbar-color: white;
+
+/* Pages */
+$fern-color: #fa3232;
+$fern-color-second: #ff7d7d;
+
+/* Index */
+$body-bg-color: rgb(41, 41, 41);
+$body-color: #fff;
+
+/* TeamContainer */
+$team-padding: 1rem;
+$team-margin: 1rem;
+$team-border-radius: 5px;
+$team-background-color: #323232;
+$team-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+$team-grid-template-rows: 40% 45% 10%;
+$team-avatar-width: fit-content;
+$team-avatar-margin: 1rem;
+$team-avatar-padding: 1rem;
+$team-avatar-mobile-margin-top: 2rem;
+$team-avatar-desktop-margin-top: 1rem;
+$team-avatar-size: 100px;
+$team-avatar-border-radius: 50%;
+$team-username-font-size: 1.5rem;
+$team-username-font-weight: 600;
+$team-username-text-align: center;
+$team-username-padding: 1rem;
+$team-name-font-size: 0.8rem;
+$team-name-text-align: center;
+$team-name-opacity: 0.8;
+$team-name-color: $fern-color;
+
+$team-tags-padding: 1rem;
+$team-tags-font-size: 0.75rem;
+$team-tags-text-align: left;
+$team-tags-display: flex;
+$team-tags-flex-wrap: wrap;
+$team-tags-flex-direction: row;
+$team-tags-align-items: center;
+$team-tags-justify-content: flex-start;
+
+$team-social-padding: 1rem;
+$team-social-display: flex;
+$team-social-a-margin: 0 0.5rem;
+$team-social-a-padding: 0.5rem;
+$team-social-img-transition: opacity 0.5s ease-in-out;
+$team-social-img-opacity: 0.5;
+$team-social-img-hover-opacity: 1;

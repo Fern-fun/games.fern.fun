@@ -1,6 +1,6 @@
 {
-  "short_name": "game",
-  "name": "game.fern.fun",
+  "short_name": "fern.fun",
+  "name": "",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,11 +10,11 @@
     {
       "src": "logo.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "192x192"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#fa3333",
-  "background_color": "#0d1117"
+  "theme_color": "#000000",
+  "background_color": "#292929"
 }

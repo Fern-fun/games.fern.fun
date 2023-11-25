@@ -1,0 +1,70 @@
+/* Fade in from left */
+.fadeInFromLeft {
+  animation: fadeInFromLeft 1s ease-in-out;
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in from bottom */
+.fadeInFromBottom {
+  animation: fadeInFromBottom 1s ease-in-out;
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth show */
+.smoothShow {
+  animation: smoothShow 1s ease-in-out;
+}
+
+@keyframes smoothShow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Breathing animation */
+.breathing {
+  animation: breathing 4s ease-in-out infinite;
+}
+@keyframes breathing {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Hover scale */
+.hoverScale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hoverScale:hover {
+  transform: scale(1.05);
+}
