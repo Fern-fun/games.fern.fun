@@ -1,12 +1,13 @@
 import React from 'react'
 
-import GamesShowCaseData from "../../Content/GamesShowCaseData"
+import GamesShowCaseData from "../../content/GamesShowCaseData"
 
 import './GamesShowCase.scss'
 
 import githubLogo from "../../assets/github.svg";
 import steamLogo from "../../assets/steam.svg";
 import discordLogo from "../../assets/discord.svg";
+import schedule from "../../assets/schedule.svg";
 
 const GamesShowCase = () => {
   return (
@@ -23,6 +24,10 @@ const GamesShowCase = () => {
                         </div>
                         <div className='game-card__tags'>
                             {game.tags.map((tag) => <div key={tag}>{tag}</div>)}  
+                        </div>
+                        <div className='game-card__release-date'>
+                            <span><img src={schedule} alt='schedule' /></span>
+                            <span>{game.releaseDate}</span>
                         </div>
                     </div>
                     <div className='game-card__links'>
