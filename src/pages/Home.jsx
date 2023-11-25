@@ -6,8 +6,6 @@ import "./Home.scss";
 
 import githubLogo from "../assets/github.svg";
 
-import GamesShowCase from "../Components/GamesShowCase/GamesShowCase";
-
 const Home = () => (
   <div className="page-container">
     <div className="box-image fadeInFromLeft">
