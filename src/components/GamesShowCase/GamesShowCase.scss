@@ -1,94 +1,176 @@
 @use "../../var.scss" as *;
 
-.game-container{
-    @media screen and (min-width: 950px) {
-    max-width: 900px;
-    }
+.game-container {
 
-    @media screen and (max-width: 950px) {
-        width: 90%;
-    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 
-    .game-card {
+    width: 100%;
+
+    .game-card{
         border-radius: $team-border-radius;
         box-shadow: $team-box-shadow;
 
-
-        @media screen and (min-width: 950px) {
+        @media screen and (min-width: 810px) {
+            width: 800px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
+            grid-template-columns: 200px 1fr 1fr;
+            padding: 1rem;
+            transition: transform 1s ease-in-out;
+
+            &:hover{
+                transform: scale(1.1);
+            }
         }
 
+        @media screen and (max-width: 810px) {
+            width: 90%;
+            padding: 1rem;
 
-        &__title{
-            grid-area: 1 / 1 / 2 / 2; 
-
-            font-size: 1.6rem;
-            font-weight: 600;
-            text-transform: uppercase;    
-            text-align: center;
-    
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin: 1rem;
-            padding: 2rem;
-
-            color: $fern-color-second;
         }
 
         &__image{
-            grid-area: 1 / 2 / 2 / 3;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-content: center;
 
-            padding: 2rem;
-    
-            img {
-                width: 100%;
+            img{
+                width: 200px;
+
+                @media screen and (max-width: 810px) {
+                    width: 90%;
+                    max-width: 300px;
+                }
             }
-            
         }
 
-        &__description{
-            display: flex;
+        &__content{
+            padding: 1rem;
+            .game-card__title{
+                text-align: left;
 
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            }
 
-            grid-area: 2 / 1 / 3 / 3; 
-            font-size: 0.9rem;
-            text-align: justify;    
+            .game-card__tags{
+                font-size: .6rem;
 
-            margin: 1rem;
-            padding: 5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                align-content: center;
 
-            width: 100%
+                div{
+                    padding: .2rem;
+                    margin: .5rem .3rem 0 0;
+                    background-color: $team-background-color;
 
+                }
+            }
         }
 
         &__links{
-            grid-area: 3 / 1 / 4 / 3; 
             display: flex;
+            justify-content: center;
+            align-content: center;
             align-items: center;
-            justify-content: flex-start;
 
-            margin: 1rem;
+            button{
+                border: none;
+                border-radius: 5px;
+                outline: none;
 
-            a{
-                margin: 1rem;
-                text-decoration: none;
-                font-size: 1.2rem;
-                font-weight: 600;
-                text-transform: uppercase;    
+                width: 100px;
+                padding: 1rem;
 
+                background-color: $fern-color-main;
+
+                cursor: pointer;
             }
+
         }
     }
+
+    // .game-card {
+    //     margin-bottom: 5rem;        
+    //     border-radius: $team-border-radius;
+    //     box-shadow: $team-box-shadow;
+
+    //     @media screen and (min-width: 950px) {
+    //         display: grid;
+    //         grid-template-columns: repeat(2, 1fr);
+    //         grid-template-rows: repeat(2, 1fr);
+    //         grid-column-gap: 0px;
+    //         grid-row-gap: 0px;
+    //     }
+
+    //     &__title{
+    //         grid-area: 1 / 1 / 2 / 2; 
+
+    //         font-size: 1.6rem;
+    //         font-weight: 600;
+    //         text-transform: uppercase;    
+    //         text-align: center;
+    
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+
+    //         padding: 2rem;
+
+    //         color: $fern-color-second;
+    //     }
+
+    //     &__image{
+    //         grid-area: 1 / 2 / 2 / 3;
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+
+    //         padding: 2rem;
+    
+    //         img {
+    //             width: 100%;
+    //         }
+            
+    //     }
+
+    //     &__description{
+    //         display: flex;
+
+    //         align-items: center;
+    //         justify-content: center;
+    //         text-align: center;
+
+    //         grid-area: 2 / 1 / 3 / 3; 
+    //         font-size: 0.9rem;
+    //         text-align: justify;    
+
+    //         padding: 5rem;
+
+    //         width: 100%
+
+    //     }
+
+    //     &__links{
+    //         grid-area: 3 / 1 / 4 / 3; 
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: flex-start;
+
+    //         padding: 1rem;
+
+    //         a{
+    //             padding: 1rem;
+    //             text-decoration: none;
+    //             font-size: 1.2rem;
+    //             font-weight: 600;
+    //             text-transform: uppercase;    
+
+    //         }
+    //     }
+    // }
 }

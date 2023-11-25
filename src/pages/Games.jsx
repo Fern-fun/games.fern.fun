@@ -1,5 +1,5 @@
 import React from 'react'
-import GamesShowCase from '../Components/GamesShowCase/GamesShowCase'
+import GamesShowCase from '../components/GamesShowCase/GamesShowCase'
 
 const Games = () => {
   return (

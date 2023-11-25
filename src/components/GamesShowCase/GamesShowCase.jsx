@@ -13,34 +13,20 @@ const GamesShowCase = () => {
     <div className='game-container fadeInFromBottom'>
         {
             GamesShowCaseData.map((game, index) => (
-                <div key={index} className='game-card'>
+                <div key={index} className='game-card' onClick={(e) => console.log(e)}>
                     <div className='game-card__image'>
                         <img src={game.image} alt={game.title} />
                     </div>
-                    <div className='game-card__title'>
-                        {game.title}
-                    </div>
-                    <div className='game-card__description'>
-                        {game.description}
+                    <div className='game-card__content'> 
+                        <div className='game-card__title'>
+                            <span>{game.title}</span>
+                        </div>
+                        <div className='game-card__tags'>
+                            {game.tags.map((tag) => <div key={tag}>{tag}</div>)}  
+                        </div>
                     </div>
                     <div className='game-card__links'>
-                        {game.steam !== '' ? 
-                        <a href={game.steam} target='_blank' rel="noreferrer">
-                            <img src={steamLogo} alt='steam ' width={24} />
-                        </a> 
-                        : null}
-                        
-                        {game.discord !== '' ? 
-                        <a href={game.discord} target='_blank' rel="noreferrer">
-                            <img src={discordLogo} alt='discord' width={24} />
-                        </a> 
-                        : null}
-                        
-                        {game.play !== '' ? 
-                        <a href={game.play} target='_blank' rel="noreferrer">
-                            <img src={githubLogo} alt='play' width={24} />
-                        </a> 
-                        : null}
+                        <button>Play</button>
                     </div>
                 </div>
             ))
