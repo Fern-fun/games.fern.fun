@@ -1,6 +1,10 @@
+//Import variables
 @use "../../var.scss" as *;
+
+// Import Hamburgers
 @import url("./Hamburgers.scss");
 
+// Navbar Container
 .navbar-container {
   width: 100%;
   z-index: 10000;

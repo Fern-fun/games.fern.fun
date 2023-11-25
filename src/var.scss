@@ -1,56 +1,33 @@
-$mobile-width: 800px;
+//! INDEX
+// Fonts
+$font-fira-code: "Fira Code", monospace;
 
-/* Nav */
-$navbar-bg-color: #1a1a1a;
-$navbar-hover-color: #fa3232;
-$navbar-lab-color: #7dc3ff;
-$navbar-color: white;
+// Colors
+$background-dark: rgb(41, 41, 41);
+$background-gradient: linear-gradient(
+0deg,
+rgba(41, 41, 41, 1) 0%,
+rgba(36, 36, 37, 1) 19%,
+rgba(30, 30, 33, 1) 39%
+);
+$body-color: #fff; // Replace with the actual body text color
+$body-bg-color: rgb(41, 41, 41); // Replace with the actual body background color
+$scrollbar-track-color: #fa3232;
+$scrollbar-thumb-color: #fa3232;
 
-/* Pages */
-$fern-color: #fa3232;
-$fern-color-second: #ff7d7d;
-$fern-color-main: #69f567;
+//! HOME Page
+$mobile-width: 800px; // Set your actual mobile width
+$fern-color: #fa3232; // Replace with your actual fern color
+$fern-color-second: #ff7d7d; // Replace with your actual secondary fern color
 
-/* Index */
-$body-bg-color: rgb(41, 41, 41);
-$body-color: #fff;
+//! Navbar
+$mobile-width: 800px; // Set your actual mobile width
+$navbar-color: #fff; // Replace with your actual navbar color
+$navbar-hover-color: #fa3232; // Replace with your actual navbar hover color
 
-/* TeamContainer */
-$team-padding: 1rem;
-$team-margin: 1rem;
-$team-border-radius: 5px;
-$team-background-color: #323232;
-$team-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-$team-grid-template-rows: 40% 45% 10%;
-$team-avatar-width: fit-content;
-$team-avatar-margin: 1rem;
-$team-avatar-padding: 1rem;
-$team-avatar-mobile-margin-top: 2rem;
-$team-avatar-desktop-margin-top: 1rem;
-$team-avatar-size: 100px;
-$team-avatar-border-radius: 50%;
-$team-username-font-size: 1.5rem;
-$team-username-font-weight: 600;
-$team-username-text-align: center;
-$team-username-padding: 1rem;
-$team-name-font-size: 0.8rem;
-$team-name-text-align: center;
-$team-name-opacity: 0.8;
-$team-name-color: $fern-color;
-
-$team-tags-padding: 1rem;
-$team-tags-font-size: 0.75rem;
-$team-tags-text-align: left;
-$team-tags-display: flex;
-$team-tags-flex-wrap: wrap;
-$team-tags-flex-direction: row;
-$team-tags-align-items: center;
-$team-tags-justify-content: flex-start;
-
-$team-social-padding: 1rem;
-$team-social-display: flex;
-$team-social-a-margin: 0 0.5rem;
-$team-social-a-padding: 0.5rem;
-$team-social-img-transition: opacity 0.5s ease-in-out;
-$team-social-img-opacity: 0.5;
-$team-social-img-hover-opacity: 1;
+//! GamesShowCase
+$game-card-color: #fff; // Replace with your actual card color
+$game-card-border-radius: 8px; // Replace with your actual border radius
+$game-card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Replace with your actual box shadow
+$game-card-background-color: #323232; // Replace with your actual background color
+$game-card--links--bnt--bg--color: #00FF7F; // Replace with your actual fern color

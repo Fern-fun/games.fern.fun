@@ -1,45 +1,39 @@
 @use "./var.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
-@import url("./anim.scss");
+@import "./anim.scss";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-fira-code;
 }
 
 body {
-  font-family: "Fira Code", monospace;
-
-  background: rgb(41, 41, 41);
-  background: linear-gradient(
-    0deg,
-    rgba(41, 41, 41, 1) 0%,
-    rgba(36, 36, 37, 1) 19%,
-    rgba(30, 30, 33, 1) 39%
-  );
-  background-attachment: fixed; /*edit*/
+  background: $background-dark;
+  background: $background-gradient;
+  background-attachment: fixed;
 
   color: $body-color;
   overflow-x: hidden;
 }
 
-/* width */
+/* Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $body-bg-color;
+  background: $scrollbar-track-color;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $fern-color;
+  background: $scrollbar-thumb-color;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $fern-color;
+  background: $scrollbar-thumb-color;
 }
