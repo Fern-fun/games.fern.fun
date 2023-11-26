@@ -30,9 +30,7 @@ const GamesShowCase = () => {
               ))}
             </div>
             <div className="game-card__release-date">
-              <span>
-                <img src={schedule} alt="schedule" />
-              </span>
+              <img src={schedule} alt="schedule" />
               <span>{game.releaseDate}</span>
             </div>
           </div>
