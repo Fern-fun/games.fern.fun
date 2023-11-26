@@ -1,0 +1,120 @@
+@use "../../var.scss" as *;
+
+// Game Container
+.game-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+
+  .game-card {
+    border-radius: $game-card-border-radius;
+    box-shadow: $game-card-box-shadow;
+
+    @media screen and (min-width: 810px) {
+      width: 800px;
+      display: grid;
+      grid-template-columns: 200px 1fr 1fr;
+      padding: 1rem;
+    }
+
+    @media screen and (max-width: 810px) {
+      width: 90%;
+      padding: 1rem;
+    }
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      img {
+        width: 200px;
+
+        @media screen and (max-width: 810px) {
+          width: 90%;
+          max-width: 300px;
+        }
+      }
+    }
+
+    &__content {
+      padding: 1rem;
+
+      .game-card__title {
+        text-align: left;
+      }
+
+      .game-card__tags {
+        font-size: 0.6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+
+        div {
+          padding: 0.2rem;
+          margin: 0.5rem 0.3rem 0 0;
+          background-color: $game-card-background-color;
+        }
+      }
+
+      .game-card__release-date {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        justify-items: center;
+
+        font-size: 0.6rem;
+        margin: 0.5rem 0;
+        color: rgba($color: $game-card-color, $alpha: 0.8);
+      }
+    }
+
+    &__links {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      button {
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        width: 100px;
+        padding: 1rem;
+        background-color: $game-card--links--bnt--bg--color;
+        cursor: pointer;
+
+        transition: all 0.3s ease-in-out;
+
+        &:disabled {
+          background-color: rgba(
+            $color: $game-card--links--bnt--bg--color,
+            $alpha: 0.5
+          );
+          border: none;
+          cursor: not-allowed;
+        }
+
+        &:hover {
+          border: 1px solid $game-card--links--bnt--bg--color;
+          background: transparent;
+          color: #fff;
+
+          &:disabled {
+            border: none;
+            background-color: rgba(
+              $color: $game-card--links--bnt--bg--color,
+              $alpha: 0.5
+            );
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

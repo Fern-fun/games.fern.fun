@@ -1,51 +1,64 @@
-@use "./variables.scss" as v;
-@import url("./hamburgers.scss");
+//Import variables
+@use "../../var.scss" as *;
 
-.navbar {
-  position: fixed;
-  background: v.$backgroundColorTile;
+// Import Hamburgers
+@import url("./Hamburgers.scss");
+
+// Navbar Container
+.navbar-container {
   width: 100%;
-  z-index: 100;
+  z-index: 10000;
 
-  @media screen and (min-width: v.$mobileWidth) {
-    .hamburger {
+  @media screen and (min-width: $mobile-width) {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    height: 80px;
+
+    &__hamburger {
       display: none;
     }
 
-    .nav {
-      display: grid;
+    &__logo {
+      width: auto;
+      margin: auto;
+      padding: 5px;
 
-      grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+      img {
+        max-width: 48px;
+        max-height: 105px;
+        padding: 0.5rem;
+      }
+    }
+
+    &__box {
+      display: grid;
+      justify-content: flex-end;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
       grid-column-start: revert;
-      gap: 20px;
       font-size: 1.1rem;
+      gap: 1rem;
 
       a {
         display: flex;
-
         justify-content: center;
         justify-items: center;
         align-items: center;
 
-        width: 150px;
-        text-align: center;
-        color: white;
+        color: $navbar-color;
         text-decoration: none;
 
         div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
           position: relative;
           display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
 
           padding: 15px;
           width: 100%;
-          min-height: 72px;
 
-          span {
-            line-height: 22px;
+          img {
+            width: 32px;
           }
 
           &::after {
@@ -56,7 +69,7 @@
             top: 100%;
             left: 0;
 
-            background: v.$themeColor;
+            background: $navbar-hover-color;
             transition: transform 0.5s;
             border-radius: 5px;
             transform: scaleX(0);
@@ -64,7 +77,7 @@
           }
 
           &:hover {
-            color: v.$themeColor;
+            color: $navbar-hover-color;
             cursor: pointer;
           }
 
@@ -73,58 +86,38 @@
             transform-origin: left;
           }
         }
-
-        .dropdown {
-          border: 2px solid red;
-          height: 200px;
-        }
-      }
-
-      .dropdown {
-        float: left;
-        overflow: hidden;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
-
-      .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
       }
     }
   }
 
-  @media screen and (max-width: v.$mobileWidth) {
-    border-bottom: 1.5px solid v.$themeColor2;
-
+  @media screen and (max-width: $mobile-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    .logo {
-      width: auto;
-      margin: auto;
+    &__logo {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding: 1rem;
 
       img {
-        max-width: 200px;
+        max-width: 48px;
+        padding: 0.5rem;
       }
     }
 
-    .nav {
+    &__hamburger {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__box {
       display: none;
       font-size: 1.1rem;
+
       a {
-        color: white;
+        color: $navbar-color;
         text-decoration: none;
 
         div {
