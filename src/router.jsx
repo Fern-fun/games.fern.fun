@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
-import Home from "./Pages/Home";
-import Games from "./Pages/Games";
+import Home from "./pages/Home";
+import Games from "./pages/Games";
 import FlagQuiz from "./components/Games/FlagQuiz/FlagQuiz";
 
 const Router = () => {
