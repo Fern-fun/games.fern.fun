@@ -5,7 +5,7 @@ const GamesShowCaseData = [
         "description": "Guess the country by its flag!",
         "tags": ["guessing", "puzzle"],
         "releaseDate": "Coming Soon",
-        "play": ""
+        "play": "/games/flag-quiz"
     }
 ]
 export default GamesShowCaseData;

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate, useParams } from "react-router-dom";
 
 import GamesShowCaseData from "../../content/GamesShowCaseData"
 
@@ -10,11 +11,13 @@ import discordLogo from "../../assets/discord.svg";
 import schedule from "../../assets/schedule.svg";
 
 const GamesShowCase = () => {
-  return (
+    const navigate = useNavigate();
+
+    return (
     <div className='game-container fadeInFromBottom'>
         {
             GamesShowCaseData.map((game, index) => (
-                <div key={index} className='game-card' onClick={(e) => console.log(e)}>
+                <div key={index} className='game-card'>
                     <div className='game-card__image'>
                         <img src={game.image} alt={game.title} />
                     </div>
@@ -31,13 +34,13 @@ const GamesShowCase = () => {
                         </div>
                     </div>
                     <div className='game-card__links'>
-                        {game.play != "" ? <button onClick={(e) => console.log(e)}>Play</button> : <button disabled>Play</button>}
+                        {game.play != "" ? <button onClick={() => navigate(game.play)}>Play</button> : <button disabled>Play</button>}
                     </div>
                 </div>
             ))
         }
     </div>
-  )
+    )
 }
 
 export default GamesShowCase
