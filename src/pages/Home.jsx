@@ -19,7 +19,11 @@ const Home = () => (
         <div className="box__content">
           <div>
             <InlineText>
-               Our passionate game development team is dedicated to crafting extraordinary virtual worlds that transcend imagination. With a focus on innovation and storytelling, we bring characters to life, build immersive environments, and create gameplay experiences that captivate and inspire.
+              Our passionate game development team is dedicated to crafting
+              extraordinary virtual worlds that transcend imagination. With a
+              focus on innovation and storytelling, we bring characters to life,
+              build immersive environments, and create gameplay experiences that
+              captivate and inspire.
             </InlineText>
           </div>
 
@@ -34,8 +38,7 @@ const Home = () => (
           </div>
         </div>
       </div>
-      <div className="box__image">
-      </div>
+      <div className="box__image"></div>
     </div>
   </div>
 );

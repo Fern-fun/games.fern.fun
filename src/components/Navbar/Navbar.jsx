@@ -54,8 +54,6 @@ function Navbar() {
             <span>Games</span>
           </div>
         </Link>
-
-        
       </div>
     </div>
   );

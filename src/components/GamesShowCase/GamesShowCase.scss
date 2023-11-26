@@ -1,6 +1,5 @@
 @use "../../var.scss" as *;
 
-
 // Game Container
 .game-container {
   display: flex;
@@ -63,16 +62,15 @@
         }
       }
 
-      .game-card__release-date{
+      .game-card__release-date {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         justify-items: center;
 
-
         font-size: 0.6rem;
         margin: 0.5rem 0;
-        color: rgba($color: $game-card-color, $alpha: .8)
+        color: rgba($color: $game-card-color, $alpha: 0.8);
       }
     }
 
@@ -91,23 +89,28 @@
         background-color: $game-card--links--bnt--bg--color;
         cursor: pointer;
 
-
         transition: all 0.3s ease-in-out;
-        
+
         &:disabled {
-          background-color: rgba($color: $game-card--links--bnt--bg--color, $alpha: 0.5);
+          background-color: rgba(
+            $color: $game-card--links--bnt--bg--color,
+            $alpha: 0.5
+          );
           border: none;
           cursor: not-allowed;
         }
-        
-        &:hover{
+
+        &:hover {
           border: 1px solid $game-card--links--bnt--bg--color;
           background: transparent;
           color: #fff;
 
           &:disabled {
             border: none;
-            background-color: rgba($color: $game-card--links--bnt--bg--color, $alpha: 0.5);
+            background-color: rgba(
+              $color: $game-card--links--bnt--bg--color,
+              $alpha: 0.5
+            );
             color: #000;
           }
         }
