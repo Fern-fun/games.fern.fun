@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import Games from "./pages/Games";
 import FlagQuiz from "./components/Games/FlagQuiz/FlagQuiz";
+import Footer from "./components/Footer/Footer";
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
         <Route path="/games" element={<Games />} />
         <Route path="/games/flag-quiz" element={<FlagQuiz />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
