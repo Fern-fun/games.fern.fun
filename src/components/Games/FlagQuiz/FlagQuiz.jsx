@@ -9,11 +9,11 @@ const FlagQuiz = () => {
   );
 
   const [hotStreak, setHotStreak] = useState(
-    localStorage.getItem("hotStreak") || 0
+    parseInt(localStorage.getItem("hotStreak") || 0)
   );
 
   const [bestStreak, setBestStreak] = useState(
-    localStorage.getItem("bestStreak") || 0
+    parseInt(localStorage.getItem("bestStreak") || 0)
   );
 
   useEffect(() => {
